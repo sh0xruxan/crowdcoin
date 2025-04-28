@@ -16,7 +16,7 @@ export const config = createConfig({
       appLogoUrl: "/logoZ.png",
     }),
     walletConnect({
-      projectId: "94c26995bcff9934c3f76d18ac2aac8a", // WalletConnect project ID
+      projectId: "YOUR_PROJECT_ID", // Replace with your WalletConnect project ID
       metadata: {
         name: "ZettaByte",
         description: "Decentralized Crowdfunding Platform",
