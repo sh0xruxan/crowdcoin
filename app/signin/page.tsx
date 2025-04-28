@@ -98,7 +98,7 @@ export default function SignInPage() {
       </div>
 
       <footer className="py-6 text-center text-sm text-gray-500">
-        <p>&copy; {new Date().getFullYear()} BlockFund. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} ZettaByte. All rights reserved.</p>
       </footer>
     </main>
   )

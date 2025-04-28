@@ -8,7 +8,6 @@ import { useEffect, useState } from "react"
 import { UserNav } from "@/components/user-nav"
 import { getCurrentUser } from "@/lib/actions"
 import { WalletConnectButton } from "@/components/wallet-connect-button"
-import Image from "next/image"
 
 export default function Navbar() {
   const { isConnected } = useAccount()
@@ -37,7 +36,7 @@ export default function Navbar() {
       <div className="flex h-16 items-center px-4 md:px-6 max-w-7xl mx-auto">
         <Link href="/" className="flex items-center gap-2 font-bold text-xl">
           <div className="h-8 w-8">
-            <Image src="/logoZ.svg" alt="ZettaByte Logo" width={32} height={32} />
+            <img src="/logoZ.png" alt="ZettaByte Logo" width={32} height={32} />
           </div>
           <span>ZettaByte</span>
         </Link>

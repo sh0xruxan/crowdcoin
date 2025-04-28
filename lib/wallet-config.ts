@@ -1,8 +1,8 @@
 import { http, createConfig } from "wagmi"
 import { mainnet, sepolia } from "wagmi/chains"
-import { injected, coinbaseWallet } from "wagmi/connectors"
+import { injected, coinbaseWallet, walletConnect } from "wagmi/connectors"
 
-// Create wagmi config without WalletConnect to avoid the error
+// Create wagmi config with WalletConnect
 export const config = createConfig({
   chains: [mainnet, sepolia],
   transports: {
@@ -13,7 +13,16 @@ export const config = createConfig({
     injected(),
     coinbaseWallet({
       appName: "ZettaByte",
-      appLogoUrl: "/logoZ.svg",
+      appLogoUrl: "/logoZ.png",
+    }),
+    walletConnect({
+      projectId: "94c26995bcff9934c3f76d18ac2aac8a", // WalletConnect project ID
+      metadata: {
+        name: "ZettaByte",
+        description: "Decentralized Crowdfunding Platform",
+        url: "https://zettabyte.vercel.app",
+        icons: ["/logoZ.png"],
+      },
     }),
   ],
 })
